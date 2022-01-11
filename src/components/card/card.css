@@ -1,0 +1,38 @@
+.nft-card {
+    transform: scale(0.8);
+    transition: all .5s ease-in .25s;
+}
+.slick-current .nft-card {
+    transform: scale(1);
+}
+.nft-card img {
+    display: block;
+    margin: 0 30px;
+}
+.nft-card-img {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.nft-card-title {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -150%);
+    background-color: antiquewhite;
+    color: black;
+    padding: 8px 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .5s ease-in, transform .8s ease-in;
+}
+.slick-current .nft-card-title {
+    opacity: 1;
+    transform: translate(-50%, 100%);
+}
+.text-center {
+    text-align: center;
+}
+.nft-card-slider {
+    position: relative;
+}
