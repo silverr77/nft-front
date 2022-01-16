@@ -6,8 +6,14 @@
 
 @layer base {
   body {
-    @apply bg-[#040714] text-[#f9f9f9] font-body scrollbar-hide;
+    @apply bg-gray-900 text-[#f9f9f9] font-body scrollbar-hide;
   }
+}
+
+
+.custom-bg-transparent {
+  background-image: url(./images/transparent.jpeg);
+  background-repeat: repeat;
 }
 
 @layer components {
