@@ -161,7 +161,26 @@ export default function Editor({ item }) {
       <div className="work-space">
         <div className="editor-work-space flex justify-center relative flex-col pb-8 px-8 bg-gray-700 custom-bg-transparent">
           <div className="editor-tools flex justify-center mb-6">
-            <EditorActions />
+            <EditorActions
+              addImage={onButtonClick}
+              changeColor={onButtonColorClick}
+              removeSelectedItem={() => removeSelectedObject(canvas)}
+              savePicture={saveImage}
+            />
+            <input
+              type='file'
+              accept="image/*"
+              id='file'
+              ref={inputFile}
+              style={{display: 'none'}}
+              onChange={(e) => selectImage(e)}
+            />
+            <input
+              type="color"
+              ref={inputColor}
+              style={{display: 'none'}}
+              onChange={(e) => selectColor(e)}
+            />
           </div>
           <div className="inline-block mx-auto">
             <canvas id="canvas" />
