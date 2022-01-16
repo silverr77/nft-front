@@ -1,0 +1,15 @@
+.big-wrapper  {
+    justify-content: normal!important;
+}
+
+.work-space {
+
+}
+
+.editor-tools {
+
+}
+
+.editor-work-space {
+    overflow: scroll;
+}

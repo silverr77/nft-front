@@ -3,11 +3,6 @@
     background-color: chartreuse;
 }
 
-#canvas {
-	width: 100%;
-    object-fit: contain;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 *{
 	margin: 0;
@@ -238,4 +233,6 @@ input[type="range"]{
 #clearAll span{
 	margin-right: 10px;
 }
+
+
 

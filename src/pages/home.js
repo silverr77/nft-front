@@ -1,18 +1,21 @@
 import React, {useState, useEffect} from 'react'
-import Card from '../components/card/card';
+//import Card from '../components/card/card';
 import axios from 'axios';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import '../components/card/card.css';
-import HpBlock from '../components/blocks/hpBlock';
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import '../components/card/card.css';
+//import HpBlock from '../components/blocks/hpBlock';
 import Header from '../layout/header/header';
+import Slider from '../components/slider/slider';
+import NftCollection from '../components/nft/nft-colletions';
 
 export default function Home() {
     const [collections, setCollections] = useState([]);
-    const baseURL = "http://localhost:8055/items/NFT_Collections";
+    const baseURL = `${process.env.REACT_APP_BASE_URL}/items/NFT_Collections`;
+
     const settings = {
-      dots: false,
+      dots: true,
       arrows: false,
       infinite: true,
       autoplay: true,
@@ -55,8 +58,10 @@ export default function Home() {
 
     return (
         <div>
-            <HpBlock>
-              <Header />
+            <Header />
+            <Slider />
+            <NftCollection />
+            {/* <HpBlock>
             </HpBlock>
             <h1 className="nft-title">OUR NFT Collections</h1>
             <div className="nft-slider mt-4 py-2 px-2">
@@ -65,7 +70,10 @@ export default function Home() {
                       <Card key={collection.id} item={collection}  />
                   )}
               </Slider>
-            </div>
+            </div> */}
+            {/* {collections.map (collection =>
+                      <Card key={collection.id} item={collection}  />
+            )} */}
         </div>
     )
 }
